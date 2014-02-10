@@ -38,7 +38,13 @@
 	float: none;
 }
 
+/* helper class for displaying grid */
 
+.temp [class*='col-'] {
+	background-color: #eee;
+	text-align: center;
+	border: 1px solid #555;
+}
 
 
 

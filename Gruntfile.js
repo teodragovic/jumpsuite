@@ -376,7 +376,7 @@ module.exports = function(grunt) {
 			test: ['validation', 'test-js'], // add csslint (can't use force)
 			optimize: ['css', 'js', 'imgmin'],
 			server1: ['assemble', 'compass:dist', 'bowercopy:scripts'],
-			server2: ['autoprefixer', 'modernizr', 'concat'],
+			server2: ['autoprefixer', 'concat'],
 			server3: ['compass:dev', 'watch'],
 			options: {
 				limit: 12,
