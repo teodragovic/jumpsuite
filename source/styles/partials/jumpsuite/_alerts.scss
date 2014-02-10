@@ -1,0 +1,20 @@
+.alert {
+	@include alert-color($blue);
+	display: block;
+	padding: ($pad/2) $pad;
+	margin-bottom: $pad;
+	font-size: $font-size-base*1.10;
+	font-weight: bold;
+	&.error {
+		@include alert-color($red);
+		a {color: darken($red, 15%);}
+	}
+	&.warning {
+		@include alert-color($orange);
+		a {color: darken($orange, 15%);}
+	}
+	&.success {
+		@include alert-color($green);
+		a {color: darken($green, 10%);}
+	}
+}

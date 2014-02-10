@@ -1,0 +1,95 @@
+html {
+	font-size: 100%;
+}
+
+body {
+	font-size: $font-size-base;
+	line-height: $line-height-base;
+	font-family: Verdana, sans-serif;
+}
+
+a {
+	color: $link;
+	text-decoration: none;
+	&:hover,
+	&:focus {
+		color: $link-hover;
+		text-decoration: underline;
+	}
+	&.disabled {
+		pointer-events: none;
+		cursor: default;
+		color: darken($gray, 25%);
+	}
+}
+
+
+p {
+	margin-top: 0;
+	margin-bottom: $line-height-computed;
+}
+em {color: navy;}
+
+
+.text-left {text-align: left !important;}
+.text-center {text-align: center;}
+.text-right {text-align: right;}
+.tex-justify {text-align: justify;}
+.text-underline {text-decoration: underline;}
+.text-no-underline {text-decoration: none;}
+.text-bold {font-weight: bold;}
+.text-no-bold {font-weight: normal !important;}
+.text-gray {color: darken($gray, 40%);}
+.text-small {font-size: ($font-size-base*0.8);}
+
+
+/* headings */
+
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+	margin-top: $line-height-computed;
+	margin-bottom: $line-height-computed;
+}
+h4, .h4 {
+	margin-top: ($line-height-computed/2);
+	margin-bottom: ($line-height-computed / 2);
+}
+
+h1, .h1 { font-size: ceil($font-size-base * 1.70); }
+h2, .h2 { font-size: ceil($font-size-base * 1.25); }
+h3, .h3 { font-size: ceil($font-size-base * 1.10); }
+h4, .h4 { font-size: $font-size-base; }
+
+
+/* lists */
+
+ul,
+ol {
+	line-height: 20px;
+	margin-top: 0;
+	margin-bottom: ($line-height-computed / 2);
+	ul,
+	ol{
+	margin-bottom: 0;
+	}
+}
+
+li.divider {
+	list-style-type: none;
+	height: ($pad/2);
+}
+
+.no-list-style {
+	@include no-bullet;
+	padding-left: 0;
+}
+
+.inline-list {
+	@extend .no-list-style;
+	> li {
+		display: inline-block;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+}

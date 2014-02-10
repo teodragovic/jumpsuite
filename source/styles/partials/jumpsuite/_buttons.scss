@@ -1,0 +1,36 @@
+button,
+.button {
+	@include btn-color($blue);
+	cursor: pointer;
+	position: relative;
+	text-decoration: none;
+	text-align: center;
+	display: inline-block;
+	padding: 2px 6px;
+	color: #fff;
+	line-height: $line-height-base;
+	font-size: $font-size-base;
+	vertical-align: middle;
+	white-space: nowrap;
+	margin-bottom: 5px;
+	&.disabled,
+	&[disabled] {
+		cursor: default;
+		pointer-events: none;
+		@include opacity(0.6);
+	}
+	&.red {@include btn-color($red);}
+	&.gray {
+		@include btn-color($gray);
+		color: $txt;
+	}
+	&.large {
+		padding: 5px 10px;
+		font-weight: bold;
+	}
+}
+
+a.button {
+	text-decoration: none;
+	color: #fff;
+}

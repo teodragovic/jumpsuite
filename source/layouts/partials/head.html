@@ -1,0 +1,34 @@
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta http-equiv="cleartype" content="on">
+	<title>{{ content.title }}{{#isnt basename "index" }} - {{ title }}{{/isnt}}</title>
+
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="{{ content.description }}">
+
+	<!--meta name="robots" content="noindex, nofollow"-->
+
+	{{> favicon }}
+	{{> msapp }}
+
+	<link rel="stylesheet" href="{{ assets }}/css/style.css">
+
+	<script src="{{ assets }}/js/vendor/modernizr.js"></script>
+	<script>
+		Modernizr.load({
+				load: [
+					'iegt8!timeout=2000!//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js',
+					'ie8!timeout=2000!//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js',
+					'{{ assets }}/js/script.js',
+					'//google-analytics.com/ga.js'
+				],
+				callback: {
+					'jquery.min.js' : function (url, result, key) { if (!window.jQuery) Modernizr.load('{{ assets }}/js/vendor/jquery.min.js'); },
+					'ga.js' : function (url, result, key) { var _gaq = [['_setAccount', 'UA-XXXXX-X'], ['_trackPageview']]; },
+				}
+			});
+	</script>
+</head>

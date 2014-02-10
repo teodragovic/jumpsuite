@@ -1,0 +1,42 @@
+/* vars */
+
+$black: #222;
+$white: #f5f5f5;
+
+$selection: #b3d4fc;
+
+$font-base: 16;
+$line-height: 1.5;
+
+$max-width: 75em; // 1200px
+
+/* jumpsuite - global variables */
+
+$pad : 10px;
+
+$b-width : 1px !default;
+$b-color : #333 !default;
+
+$f-width : 20%;
+
+/* base colors*/
+
+$blue : #5c9ccc;
+$red : #c60f13;
+$gray : #ddd;
+$orange : #FF9300;
+$green : #2D921D;
+
+/* type colors */
+
+$txt : #333;
+
+$link : $blue;
+$link-hover: $red;
+
+/* type base */
+
+$font-size-base: 16px;
+
+$line-height-base: 1.5;
+$line-height-computed: floor($font-size-base * $line-height-base);

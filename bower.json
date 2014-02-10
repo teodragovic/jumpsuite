@@ -1,0 +1,9 @@
+{
+  "name": "bolt",
+  "private": true,
+  "version": "0.0.0",
+  "dependencies": {
+    "normalize-css": "latest"
+  },
+  "devDependencies": {}
+}
